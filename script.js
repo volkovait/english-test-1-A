@@ -2,7 +2,7 @@
   'use strict';
 
   const ANSWERS = {
-    grammar1: ['m', 'm', 'are', 'm', 'are', 'm', 'm', 'are'],
+    grammar1: ['m', 'm', 'are', 'm', 'are', 'am', 'm', 'are'],
     grammar2: ['is', "isn't", 'is', 'is', 'is', "isn't", 'is', 'am', 'are'],
     grammar3: ['an', 'has', 'glasses', 'have', 'an'],
     readingTf: ['T', 'T', 'F', 'T', 'F'],
@@ -27,7 +27,7 @@
       "Are you a student?",
       "I'm not.",
       "Are you from Germany?",
-      "I'm.",
+      "Yes, I am",
       "I'm from Beijing.",
       "Are you Chinese?"
     ],
