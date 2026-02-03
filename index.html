@@ -11,6 +11,9 @@
     <header>
       <h1>Part A • Grammar, Vocabulary and How to ...</h1>
       <p class="subtitle">GRAMMAR</p>
+      <p class="name-row">
+        <input class="name-input" required type="text" id="user-name" placeholder="Ваше имя" maxlength="100" />
+      </p>
     </header>
 
     <!-- Section 1: Choose the correct words -->
@@ -37,10 +40,10 @@
       </div>
     </section>
 
-    <!-- Section 2: is / isn't -->
+    <!-- Section 2: is / isn't / am / are -->
     <section class="test-section" data-section="grammar-2">
-      <h2>Complete the sentences with <em>is</em> or <em>isn't</em>.</h2>
-      <div class="score-badge">/7</div>
+      <h2>Complete the sentences with <em>is</em>, <em>isn't</em>, <em>am</em> or <em>are</em>.</h2>
+      <div class="score-badge">/9</div>
       <ol class="sentences-list">
         <li>My sister <input type="text" name="g2-1" placeholder="_______" maxlength="5"> a student. (+)</li>
         <li>Paris <input type="text" name="g2-2" placeholder="_______" maxlength="5"> in India. (-)</li>
@@ -49,6 +52,8 @@
         <li><input type="text" name="g2-5" placeholder="_______" maxlength="5"> Melbourne in Australia?</li>
         <li>She <input type="text" name="g2-6" placeholder="_______" maxlength="5"> in my class. (-)</li>
         <li>What <input type="text" name="g2-7" placeholder="_______" maxlength="5"> your name?</li>
+        <li>I <input type="text" name="g2-8" placeholder="_______" maxlength="5"> a teacher. (+)</li>
+        <li>We <input type="text" name="g2-9" placeholder="_______" maxlength="5"> from London. (+)</li>
       </ol>
     </section>
 
@@ -81,6 +86,7 @@
     <!-- Task 3: True/False -->
     <section class="test-section" data-section="reading-tf">
       <h2>Read the text. Are the statements True (T) or False (F)?</h2>
+      <div class="score-badge">/5</div>
       <ol class="tf-list">
         <li>Hailey is a student. <label><input type="radio" name="tf-1" value="T"> T</label> <label><input type="radio" name="tf-1" value="F"> F</label></li>
         <li>Daniel is from France. <label><input type="radio" name="tf-2" value="T"> T</label> <label><input type="radio" name="tf-2" value="F"> F</label></li>
@@ -93,6 +99,7 @@
     <!-- Task 4: Matching -->
     <section class="test-section" data-section="reading-match">
       <h2>Read the text again. Match the people (1–5) with the jobs (A–E).</h2>
+      <div class="score-badge">/5</div>
       <div class="matching">
         <div class="match-pairs">
           <div class="match-row"><span>1. Hailey</span> <select name="match-1"><option value="">—</option><option value="A">A. waiter</option><option value="B">B. nurse</option><option value="C">C. singer</option><option value="D">D. taxi driver</option><option value="E">E. shop assistant</option></select></div>
@@ -106,9 +113,22 @@
 
     <div class="actions">
       <button type="button" id="check-btn">Проверить ответы</button>
+      <p id="score-display" class="score-display hidden" aria-live="polite"></p>
     </div>
 
     <div id="result-toast" class="toast hidden" aria-live="polite"></div>
+
+    <div id="confirm-modal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="confirm-modal-title">
+      <div class="modal-backdrop"></div>
+      <div class="modal-box">
+        <p id="confirm-modal-title" class="modal-title">Не все ответы заполнены.</p>
+        <p class="modal-text">Точно отправить форму?</p>
+        <div class="modal-actions">
+          <button type="button" id="confirm-submit-btn">Отправить</button>
+          <button type="button" id="confirm-cancel-btn">Отмена</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
